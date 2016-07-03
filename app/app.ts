@@ -1,4 +1,5 @@
 import 'angular';
+import 'angular-route';
 import 'angular-ui-bootstrap';
 function App() {
     return {
@@ -21,5 +22,6 @@ class AppController {
     constructor() {
     }
 }
-angular.module('app', [angular.ui.bootstrap]).directive('app', App);
-angular.bootstrap(document, ['app']);
+angular.module('app', [])
+    .directive('app', App);
+angular.bootstrap(document, ['app'])

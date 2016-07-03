@@ -1,9 +1,14 @@
 {
   "name": "pokedex",
   "version": "0.0.1",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
   "dependencies": {
     "angular": "^1.5.0",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   },
   "devDependencies": {
     "css-loader": "^0.23.1",
@@ -13,8 +18,6 @@
     "ts-loader": "^0.8.0",
     "url-loader": "^0.5.7",
     "typescript": "1.7.5",
-    "tsd": "0.6.5",
-    "webpack": "1.12.13",
-    "webpack-dev-server": "1.12.0"
+    "tsd": "0.6.5"
   }
 }

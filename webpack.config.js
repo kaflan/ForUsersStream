@@ -21,8 +21,8 @@ module.exports = {
 
     devServer: {
         contentBase: "./app",
+        hot: true,
         historyApiFallback: true,
-
         watchOptions: {
             aggregateTimeout: 500,
             poll: 1000

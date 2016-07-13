@@ -1,27 +1,29 @@
 import 'angular';
 import 'angular-route';
 import 'angular-ui-bootstrap';
-function App() {
-    return {
-        restrict: 'E',
-        template: `
-            <h1>Hello from npm and webpack</h1>
-            <h2>
-                Hello from typescrypt: 
-            </h2>
-            <h3>
-                Hello Kaf I love you forever
-            </h3>
+export module app {
+    'use strict';
+    function App() {
+        return {
+            restrict: 'E',
+            template: `
+        <div ng-cloak>
+            <h1>Hello {{App.tittle}}</h1>
+            {{1+1}}
+        </div>
         `,
-        controller: AppController,
-        controllerAs: 'App'
+            controller: AppController,
+            controllerAs: 'App'
+        }
     }
-}
-class AppController {
+    class AppController {
+        tittle: string;
 
-    constructor() {
+        constructor() {
+            this.tittle = 'kaflan';
+        }
     }
+    angular.module('app', ['ui.bootstrap'])
+        .directive('app', App);
+    angular.bootstrap(document, ['app']);
 }
-angular.module('app', [])
-    .directive('app', App);
-angular.bootstrap(document, ['app'])
